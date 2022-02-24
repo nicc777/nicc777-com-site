@@ -1,0 +1,6 @@
+# Brand new site...
+
+I have registered this domain for myself several years ago, and I thought I might finally start to host something useful here....
+
+The site basic framework is still under construction. Content will start to appear in the near future.
+

@@ -1,0 +1,21 @@
+site_name: nicc777
+site_url: https://www.nicc777.com/
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+    name: bootstrap4
+repo_url: https://github.com/nicc777/nicc777-com-site
+repo_name: GitHub
+site_author: Nico Coetzee
+dev_addr: 127.0.0.1:8099
+markdown_extensions:
+  - toc:
+      permalink: True
+      separator: "_"
+  - fenced_code
+  - sane_lists
+plugins:
+  - search:
+      indexing: 'full'
+  
