@@ -1,0 +1,1 @@
+It's best to navigate the blogs from the [main blog page](../index.md)

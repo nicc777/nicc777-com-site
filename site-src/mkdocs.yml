@@ -3,6 +3,7 @@ site_url: https://www.nicc777.com/
 nav:
   - Home: index.md
   - About: about.md
+  - Blog: blog/index.md
 theme:
   name: null
   custom_dir: 'cinder'
