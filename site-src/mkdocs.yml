@@ -4,7 +4,10 @@ nav:
   - Home: index.md
   - About: about.md
 theme:
-    name: bootstrap4
+  name: null
+  custom_dir: 'cinder'
+  colorscheme: dracula
+copyright: All original content licensed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
 repo_url: https://github.com/nicc777/nicc777-com-site
 repo_name: GitHub
 site_author: Nico Coetzee
