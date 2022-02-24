@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - About: about.md
   - Blog: blog/index.md
+  - Legal: legal/index.md
 theme:
   name: null
   custom_dir: 'cinder'
