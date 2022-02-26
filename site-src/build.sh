@@ -15,3 +15,7 @@ This page has moved. Click <a href="http://www.nicc777.com/">here</a> to go to t
 </body>
 </html>
 EOF
+
+cd site
+aws s3 sync ./ s3://www.nicc777.com/ --profile nicc777
+cd ../
