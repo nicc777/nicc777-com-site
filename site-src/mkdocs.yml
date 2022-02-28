@@ -1,5 +1,6 @@
 site_name: nicc777
 site_url: https://www.nicc777.com/
+use_directory_urls: false
 nav:
   - Home: index.md
   - About: about.md
