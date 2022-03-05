@@ -10,6 +10,7 @@ Below are all my blog entries grouped by year and month with the latest entries 
 
 | Date       | Title                                                | Notes                                                                                                         |
 |------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 2022-03-05 | [Project Announcements](2022/2022-03-05.md)          |                                                                                                               |
 | 2022-03-04 | [Time for something uplifting](2022/2022-03-04.md)   |                                                                                                               |
 | 2022-03-02 | [Tuning WSL](2022/2022-03-02.md)                     | Because some of us are forced to use Windows everyday...                                                      |
 
