@@ -10,6 +10,7 @@ Below are all my blog entries grouped by year and month with the latest entries 
 
 | Date       | Title                                                | Notes                                                                                                         |
 |------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 2022-03-09 | [Early Reflections](2022/2022-03-09.md)                  |                                                                                                               |
 | 2022-03-08 | [Mocking Crazy](2022/2022-03-08.md)                  |                                                                                                               |
 | 2022-03-07 | [Testing Testing...](2022/2022-03-07.md)             | Exploring unit testing Python Boto3 code                                                                      |
 | 2022-03-06 | [Various thoughts](2022/2022-03-06.md)               |                                                                                                               |
