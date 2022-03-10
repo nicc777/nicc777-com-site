@@ -165,6 +165,19 @@ def generate_list_of_files_to_upload(
     return uploads
 
 
+def generate_list_of_files_to_delete_remotely(
+    local_manifest: str,    # Lines containing something like "c6e9fb78d6ab9c56c558b72b73e29522 blog/2022/2022-02-24.html" on each line
+    remote_manifest: str,   # Lines containing something like "67e41450ce5bb8567efdc606f3e424c8 blog/2022/2022-02-24.html" on each line
+)->dict:
+    deletes = list()
+    local_manifest_data = generate_files_from_manifest(manifest=local_manifest)   # { 'blog/2022/2022-02-24.html': '67e41450ce5bb8567efdc606f3e424c8', .... }
+    for remote_filename, remote_checksum in generate_files_from_manifest(manifest=remote_manifest).items():    # { 'blog/2022/2022-02-24.html': 'c6e9fb78d6ab9c56c558b72b73e29522', .... }
+        if remote_filename not in local_manifest_data:
+            deletes.append(remote_filename)
+    logger.debug('deletes={}'.format(deletes))
+    return deletes
+
+
 def write_local_manifest(local_manifest: str)->str:
     local_manifest_file_path = '{}{}{}'.format(
         tempfile.gettempdir(),
@@ -253,6 +266,21 @@ def upload_local_file(
     return True
 
 
+def delete_remote_file(
+    bucket_name: str, 
+    key: str, 
+    client=get_aws_resource(boto3_library=boto3,service='s3')
+):
+    try:
+
+
+        logger.info('Deleted remote file "{}" from s3'.format(key))
+    except:
+        logger.info('Unable to delete "{}" - enable debug to see full stacktrace'.format(key))
+        logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
+        return False
+
+
 ###############################################################################
 ###                                                                         ###
 ###                                 M A I N                                 ###
@@ -274,7 +302,10 @@ def main():
         remote_manifest=remote_manifest,
         directory=directory
     )
-    # TODO Generate list of remote files to DELETE
+    files_to_delete = generate_list_of_files_to_delete_remotely(
+        local_manifest=local_manifest,
+        remote_manifest=remote_manifest
+    )
     # TODO Upload local files to remote
     # TODO Delete remote files no longer locally present
 
