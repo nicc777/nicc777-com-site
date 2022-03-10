@@ -211,6 +211,26 @@ def retrieve_manifest_from_s3(
     return data
 
 
+def upload_local_file(
+    bucket_name: str, 
+    local_file_path: str,
+    target_key: str, 
+    client=get_aws_resource(boto3_library=boto3,service='s3')
+)->bool:
+    try:
+        client.meta.client.upload_file(
+            Filename=local_file_path,
+            Bucket=bucket_name,
+            Key=target_key
+        )
+        logger.info('Uploaded local file "{}" to s3://{}/{}'.format(local_file_path, bucket_name, target_key))
+    except:
+        logger.info('Unable to retrieve "{}" from "{}" - enable debug to see full stacktrace'.format(manifest_filename, bucket_name))
+        logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
+        return False
+    return True
+
+
 ###############################################################################
 ###                                                                         ###
 ###                                 M A I N                                 ###
@@ -235,6 +255,22 @@ def main():
     # TODO Generate list of remote files to DELETE
     # TODO Upload local files to remote
     # TODO Delete remote files no longer locally present
+
+    local_manifest_file_path = '{}{}{}'.format(
+        tempfile.gettempdir(),
+        os.sep,
+        'INVENTORY'
+    )
+    with open(local_manifest_file_path, 'w') as f:
+        f.write(local_manifest)
+    upload_local_file(
+        bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
+        local_file_path=local_manifest_file_path,
+        target_key='INVENTORY', 
+        client=get_aws_resource(boto3_library=boto3,service='s3')
+    )
+
+
 
 
 if __name__ == '__main__':
