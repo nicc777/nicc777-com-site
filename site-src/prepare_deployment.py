@@ -250,7 +250,6 @@ def upload_local_file(
     except:
         logger.info('Unable to delete "{}" - enable debug to see full stacktrace'.format(local_file_path))
         logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
-        return False
     return True
 
 
