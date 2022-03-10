@@ -232,7 +232,9 @@ def main():
         remote_manifest=remote_manifest,
         directory=directory
     )
-    
+    # TODO Generate list of remote files to DELETE
+    # TODO Upload local files to remote
+    # TODO Delete remote files no longer locally present
 
 
 if __name__ == '__main__':
