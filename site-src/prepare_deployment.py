@@ -165,6 +165,18 @@ def generate_list_of_files_to_upload(
     return uploads
 
 
+def write_local_manifest(local_manifest: str)->str:
+    local_manifest_file_path = '{}{}{}'.format(
+        tempfile.gettempdir(),
+        os.sep,
+        'INVENTORY'
+    )
+    with open(local_manifest_file_path, 'w') as f:
+        f.write(local_manifest)
+    logger.debug('Written local manifest file to "{}"'.format(local_manifest_file_path))
+    return local_manifest_file_path
+
+
 ###############################################################################
 ###                                                                         ###
 ###                        A W S    F U N C T I O N S                       ###
@@ -215,7 +227,8 @@ def upload_local_file(
     bucket_name: str, 
     local_file_path: str,
     target_key: str, 
-    client=get_aws_resource(boto3_library=boto3,service='s3')
+    client=get_aws_resource(boto3_library=boto3,service='s3'),
+    remove_local_file_after_upload: bool=False
 )->bool:
     try:
         client.meta.client.upload_file(
@@ -226,6 +239,16 @@ def upload_local_file(
         logger.info('Uploaded local file "{}" to s3://{}/{}'.format(local_file_path, bucket_name, target_key))
     except:
         logger.info('Unable to retrieve "{}" from "{}" - enable debug to see full stacktrace'.format(manifest_filename, bucket_name))
+        logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
+        return False
+    try:
+        if remove_local_file_after_upload is True:
+            os.remove(local_file_path)
+            logger.debug('Deleted local file "{}"'.format(local_file_path))
+        else:
+            logger.debug('SKIPPED deletion of local file "{}"'.format(local_file_path))
+    except:
+        logger.info('Unable to delete "{}" - enable debug to see full stacktrace'.format(local_file_path))
         logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
         return False
     return True
@@ -256,20 +279,13 @@ def main():
     # TODO Upload local files to remote
     # TODO Delete remote files no longer locally present
 
-    local_manifest_file_path = '{}{}{}'.format(
-        tempfile.gettempdir(),
-        os.sep,
-        'INVENTORY'
-    )
-    with open(local_manifest_file_path, 'w') as f:
-        f.write(local_manifest)
     upload_local_file(
         bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
-        local_file_path=local_manifest_file_path,
+        local_file_path=write_local_manifest(local_manifest=local_manifest),
         target_key='INVENTORY', 
-        client=get_aws_resource(boto3_library=boto3,service='s3')
+        client=get_aws_resource(boto3_library=boto3,service='s3'),
+        remove_local_file_after_upload=True
     )
-    os.remove(local_manifest_file_path)
 
 
 if __name__ == '__main__':
