@@ -269,6 +269,7 @@ def main():
         target_key='INVENTORY', 
         client=get_aws_resource(boto3_library=boto3,service='s3')
     )
+    os.remove(local_manifest_file_path)
 
 
 if __name__ == '__main__':
