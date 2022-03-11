@@ -16,6 +16,8 @@ This page has moved. Click <a href="http://www.nicc777.com/">here</a> to go to t
 </html>
 EOF
 
-cd site
-aws s3 sync ./ s3://www.nicc777.com/ --profile nicc777
-cd ../
+# cd site
+# aws s3 sync ./ s3://www.nicc777.com/ --profile nicc777
+# cd ../
+
+python3 prepare_deployment.py --bucket-name="www.nicc777.com" --debug

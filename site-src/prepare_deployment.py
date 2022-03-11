@@ -151,12 +151,12 @@ def generate_list_of_files_to_upload(
     uploads = dict()    # INDEX=local file name    DATA: key name
     remote_manifest_data = generate_files_from_manifest(manifest=remote_manifest)   # { 'blog/2022/2022-02-24.html': '67e41450ce5bb8567efdc606f3e424c8', .... }
     for local_filename, local_checksum in generate_files_from_manifest(manifest=local_manifest).items():    # { 'blog/2022/2022-02-24.html': 'c6e9fb78d6ab9c56c558b72b73e29522', .... }
+        local_file_path = '{}{}{}'.format(
+            directory,
+            os.sep,
+            local_filename
+        )
         if local_filename not in remote_manifest_data:
-            local_file_path = '{}{}{}'.format(
-                directory,
-                os.sep,
-                local_filename
-            )
             uploads[local_file_path] = local_filename
         else:
             if local_checksum != remote_manifest_data[local_filename]:
@@ -251,7 +251,7 @@ def upload_local_file(
         )
         logger.info('Uploaded local file "{}" to s3://{}/{}'.format(local_file_path, bucket_name, target_key))
     except:
-        logger.info('Unable to retrieve "{}" from "{}" - enable debug to see full stacktrace'.format(manifest_filename, bucket_name))
+        logger.info('Unable to upload "{}" to "{}" - enable debug to see full stacktrace'.format(local_file_path, bucket_name))
         logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
         return False
     try:
@@ -272,13 +272,21 @@ def delete_remote_file(
     client=get_aws_resource(boto3_library=boto3,service='s3')
 ):
     try:
-
-
-        logger.info('Deleted remote file "{}" from s3'.format(key))
+        response = client.delete_object(
+            Bucket=bucket_name,
+            Key=key
+        )
+        logger.debug('response={}'.format(response))
+        if 'DeleteMarker' in response:
+            if response['DeleteMarker'] == True:
+                logger.info('Deleted remote file "{}" from s3'.format(key))
+            else:
+                logger.warning('Remote file "{}" NOT DELETED from s3 (unknown reason)'.format(key))
+        else:
+            logger.error('Status of file "{}" unknown - Unexpected response: {}'.format(key, response))
     except:
         logger.info('Unable to delete "{}" - enable debug to see full stacktrace'.format(key))
         logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
-        return False
 
 
 ###############################################################################
@@ -306,9 +314,20 @@ def main():
         local_manifest=local_manifest,
         remote_manifest=remote_manifest
     )
-    # TODO Upload local files to remote
-    # TODO Delete remote files no longer locally present
-
+    for local_file, key in files_to_upload.items():
+        upload_local_file(
+            bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
+            local_file_path=local_file,
+            target_key=key, 
+            client=get_aws_resource(boto3_library=boto3,service='s3'),
+            remove_local_file_after_upload=False
+        )    
+    for key in files_to_delete:
+        delete_remote_file(
+            bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
+            key=key, 
+            client=get_aws_client(boto3_library=boto3,service='s3')
+        )
     upload_local_file(
         bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
         local_file_path=write_local_manifest(local_manifest=local_manifest),
