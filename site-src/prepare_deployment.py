@@ -15,6 +15,10 @@ import boto3
 import tempfile
 
 
+# See https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+MIME_TYPES = {'.aac': 'audio/aac', '.abw': 'application/x-abiword', '.arc': 'application/x-freearc', '.avif': 'image/avif', '.avi': 'video/x-msvideo', '.azw': 'application/vnd.amazon.ebook', '.bin': 'application/octet-stream', '.bmp': 'image/bmp', '.bz': 'application/x-bzip', '.bz2': 'application/x-bzip2', '.cda': 'application/x-cdf', '.csh': 'application/x-csh', '.css': 'text/css', '.csv': 'text/csv', '.doc': 'application/msword', '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', '.eot': 'application/vnd.ms-fontobject', '.epub': 'application/epub+zip', '.gz': 'application/gzip', '.gif': 'image/gif', '.htm': 'text/html', '.html': 'text/html', '.ico': 'image/vnd.microsoft.icon', '.ics': 'text/calendar', '.jar': 'application/java-archive', '.jpeg': 'image/jpeg', '.js': 'text/javascript', '.json': 'application/json', '.jsonld': 'application/ld+json', '.mid': 'audio/x-midi', '.mjs': 'text/javascript', '.mp3': 'audio/mpeg', '.mp4': 'video/mp4', '.mpeg': 'video/mpeg', '.mpkg': 'application/vnd.apple.installer+xml', '.odp': 'application/vnd.oasis.opendocument.presentation', '.ods': 'application/vnd.oasis.opendocument.spreadsheet', '.odt': 'application/vnd.oasis.opendocument.text', '.oga': 'audio/ogg', '.ogv': 'video/ogg', '.ogx': 'application/ogg', '.opus': 'audio/opus', '.otf': 'font/otf', '.png': 'image/png', '.pdf': 'application/pdf', '.php': 'application/x-httpd-php', '.ppt': 'application/vnd.ms-powerpoint', '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation', '.rar': 'application/vnd.rar', '.rtf': 'application/rtf', '.sh': 'application/x-sh', '.svg': 'image/svg+xml', '.swf': 'application/x-shockwave-flash', '.tar': 'application/x-tar', '.tif': 'image/tiff', '.ts': 'video/mp2t', '.ttf': 'font/ttf', '.txt': 'text/plain', '.vsd': 'application/vnd.visio', '.wav': 'audio/wav', '.weba': 'audio/webm', '.webm': 'video/webm', '.webp': 'image/webp', '.woff': 'font/woff', '.woff2': 'font/woff2', '.xhtml': 'application/xhtml+xml', '.xls': 'application/vnd.ms-excel', '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', '.xml': 'application/xml', '.xul': 'application/vnd.mozilla.xul+xml', '.zip': 'application/zip', '.3gp': 'video/3gpp', '.3g2': 'video/3gpp2', '.7z': 'application/x-7z-compressed'}
+
+
 ###############################################################################
 ###                                                                         ###
 ###                   C O M M A N D    L I N E    A R G S                   ###
@@ -190,6 +194,18 @@ def write_local_manifest(local_manifest: str)->str:
     return local_manifest_file_path
 
 
+def derive_mimetype(filename: str)->str:
+    mime_type = 'application/octet-stream'
+    try:
+        for file_ext, target_mime_type in MIME_TYPES.items():
+            if filename.lower().endswith(file_ext.lower()):
+                mime_type = target_mime_type
+        logger.info('Mimetype for file "{}" set to "{}"'.format(filename, mime_type))
+    except:
+        logger.debug('EXCEPTION: {}'.format(traceback.format_exc()))
+    return mime_type
+
+
 ###############################################################################
 ###                                                                         ###
 ###                        A W S    F U N C T I O N S                       ###
@@ -240,15 +256,21 @@ def upload_local_file(
     bucket_name: str, 
     local_file_path: str,
     target_key: str, 
-    client=get_aws_resource(boto3_library=boto3,service='s3'),
+    client=get_aws_client(boto3_library=boto3,service='s3'),
     remove_local_file_after_upload: bool=False
 )->bool:
     try:
-        client.meta.client.upload_file(
-            Filename=local_file_path,
+        data = ''
+        with open(local_file_path, 'rb') as f:
+            data = f.read()
+        mime_type = derive_mimetype(filename=local_file_path)
+        response = client.put_object(
+            Body=data,
             Bucket=bucket_name,
-            Key=target_key
+            ContentType=mime_type,
+            Key=target_key,
         )
+        logger.debug('response={}'.format(response))
         logger.info('Uploaded local file "{}" to s3://{}/{}'.format(local_file_path, bucket_name, target_key))
     except:
         logger.info('Unable to upload "{}" to "{}" - enable debug to see full stacktrace'.format(local_file_path, bucket_name))
@@ -319,7 +341,7 @@ def main():
             bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
             local_file_path=local_file,
             target_key=key, 
-            client=get_aws_resource(boto3_library=boto3,service='s3'),
+            client=get_aws_client(boto3_library=boto3,service='s3'),
             remove_local_file_after_upload=False
         )    
     for key in files_to_delete:
@@ -332,7 +354,7 @@ def main():
         bucket_name=get_argument_string(arg_data=args.bucket_name).lower(), 
         local_file_path=write_local_manifest(local_manifest=local_manifest),
         target_key='INVENTORY', 
-        client=get_aws_resource(boto3_library=boto3,service='s3'),
+        client=get_aws_client(boto3_library=boto3,service='s3'),
         remove_local_file_after_upload=True
     )
 
