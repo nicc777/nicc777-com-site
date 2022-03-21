@@ -10,6 +10,7 @@ Below are all my blog entries grouped by year and month with the latest entries 
 
 | Date       | Title                                                | Notes                                                                                                         |
 |------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 2022-03-20 | [Kubernetes and AWS ECR](2022/2022-03-20.md)         | Here I discuss one strategy/approach to allow a Kubernetes cluster outside of EKS to pull images from AWS ECR |
 | 2022-03-17 | [Work Mobility](2022/2022-03-17.md)                  |                                                                                                               |
 | 2022-03-13 | [MIME](2022/2022-03-13.md)                           | Troubleshooting the recently updated upload script                                                            |
 | 2022-03-11 | [New sync script](2022/2022-03-11.md)                |                                                                                                               |
