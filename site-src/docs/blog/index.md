@@ -6,6 +6,12 @@ Below are all my blog entries grouped by year and month with the latest entries 
 
 ## 2022
 
+### Aprile
+
+| Date       | Title                                                | Notes                                                                                                         |
+|------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 2022-04-03 | [Kubernetes Quickly with K3s](2022/2022-04-03.md)    |                                                                                                               |
+
 ### March
 
 | Date       | Title                                                | Notes                                                                                                         |
