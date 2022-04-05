@@ -1,6 +1,8 @@
-# Brand new site...
+# About this site
 
-I have registered this domain for myself several years ago, and I thought I might finally start to host something useful here....
+The is [my](https://www.linkedin.com/in/nicocoetzee/) personal site where I like to write and share information about topics close to my heart.
 
-The site basic framework is still under construction. Content will start to appear in the near future.
+At the moment I have an Information Technology focused [blog](blog/index.md) where I hope to share some of my learnings from working with various technologies. 
+
+In future I will expand my writings on other topics as well.
 
