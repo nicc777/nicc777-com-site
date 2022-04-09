@@ -12,6 +12,7 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 | Date       | Title                                                | Notes                                                                                                         | Tags                    |
 |------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-------------------------|
+| 2022-04-10 | [Kubernetes API in Python](2022/2022-04-10.md)       | Technical deep dive into exploring the Kubernetes API in Python, from within a Kubernetes cluster.            | kubernetes, python, api |
 | 2022-04-05 | [Technology Dependant](2022/2022-04-05.md)           |                                                                                                               | personal                |
 | 2022-04-03 | [Kubernetes Quickly with K3s](2022/2022-04-03.md)    |                                                                                                               | kubernetes, k3s         |
 
