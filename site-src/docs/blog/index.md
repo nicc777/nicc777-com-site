@@ -12,7 +12,7 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 | Date       | Title                                                   | Notes                                                                                               | Tags                                       |
 |------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------|--------------------------------------------|
-| 2022-04-16 | [Kubernetes API in Python](2022/2022-04-10.md) - PART 2 | Technical deep dive into exploring the Kubernetes API in Python, from within a Kubernetes cluster.  | kubernetes, python, resources, api, locust |
+| 2022-04-16 | [Kubernetes API in Python](2022/2022-04-16.md) - PART 2 | Technical deep dive into exploring the Kubernetes API in Python, from within a Kubernetes cluster.  | kubernetes, python, resources, api, locust |
 | 2022-04-15 | [Project Announcements](2022/2022-04-15.md)             |                                                                                                     |                                            |
 | 2022-04-10 | [Kubernetes API in Python](2022/2022-04-10.md) - PART 1 | Technical deep dive into exploring the Kubernetes API in Python, from within a Kubernetes cluster.  | kubernetes, python, resources, api, locust |
 | 2022-04-05 | [Technology Dependant](2022/2022-04-05.md)              |                                                                                                     | personal                                   |
