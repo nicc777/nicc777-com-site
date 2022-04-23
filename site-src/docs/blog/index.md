@@ -12,6 +12,7 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 | Date       | Title                                                   | Notes                                                                                               | Tags                                       |
 |------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------|--------------------------------------------|
+| 2022-04-23 | [My favorite tools](2022/2022-04-23.md)                 |                                                                                                     | gui, cli, web                              |
 | 2022-04-18 | [Kubernetes Tools (CLI)](2022/2022-04-18.md)            |                                                                                                     | kubernetes, cli                            |
 | 2022-04-16 | [Kubernetes API in Python](2022/2022-04-16.md) - PART 2 | Technical deep dive into exploring the Kubernetes API in Python, from within a Kubernetes cluster.  | kubernetes, python, resources, api, locust |
 | 2022-04-15 | [Project Announcements](2022/2022-04-15.md)             |                                                                                                     |                                            |
