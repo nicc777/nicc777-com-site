@@ -12,6 +12,7 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 | Date       | Title                                                   | Notes                                                                                               | Tags                                       |
 |------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------|--------------------------------------------|
+| 2022-04-29 | [Kubectl Plugins](2022/2022-04-29.md)                   |                                                                                                     | kubernetes, cli                            |
 | 2022-04-25 | [Running Gitlab CE](2022/2022-04-25.md)                 |                                                                                                     | git, gitlab                                |
 | 2022-04-23 | [My favorite tools](2022/2022-04-23.md)                 |                                                                                                     | gui, cli, web                              |
 | 2022-04-18 | [Kubernetes Tools (CLI)](2022/2022-04-18.md)            |                                                                                                     | kubernetes, cli                            |
