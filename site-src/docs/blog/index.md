@@ -13,6 +13,7 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 | Date       | Title                                                    | Notes                                                                                              | Tags                                       |
 |------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------|
 | 2022-05-07 | [GlusterFS on Multipass: Quickstart](2022/2022-05-07.md) |                                                                                                    | file-systems, cluster                      |
+
 ### April
 
 | Date       | Title                                                   | Notes                                                                                               | Tags                                       |
