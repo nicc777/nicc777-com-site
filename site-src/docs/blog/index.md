@@ -10,9 +10,10 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 ### May
 
-| Date       | Title                                                    | Notes                                                                                              | Tags                                       |
-|------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------|
-| 2022-05-07 | [GlusterFS on Multipass: Quickstart](2022/2022-05-07.md) |                                                                                                    | file-systems, cluster                      |
+| Date       | Title                                                    | Notes                                                                                              | Tags                                             |
+|------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| 2022-05-25 | [Kubernetes Persistent Volumes](2022/2022-05-25.md)      | My lab notes for experimenting with GlusterFS as a storage backend for my k3s persistent volumes.  | file-systems, kubernetes, persistent volumes, pv |
+| 2022-05-07 | [GlusterFS on Multipass: Quickstart](2022/2022-05-07.md) |                                                                                                    | file-systems, cluster                            |
 
 ### April
 
