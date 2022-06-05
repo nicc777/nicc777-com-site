@@ -8,6 +8,12 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 ## 2022
 
+### June
+
+| Date       | Title                                                        | Notes                                                                                              | Tags                                                  |
+|------------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 2022-06-06 | [AWS Cognito Web App in Pure JavaScript](2022/2022-06-06.md) | A detailed walk through of using AWS Cognito with Authorization Code flow with PKCE.               | aws, cognito, authentication, authorization, security |
+
 ### May
 
 | Date       | Title                                                    | Notes                                                                                              | Tags                                             |
