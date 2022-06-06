@@ -3,6 +3,7 @@
         "Civo",
         "Gluster",
         "kustomize",
+        "OIDC",
         "pykles",
         "Quickstart"
     ]
