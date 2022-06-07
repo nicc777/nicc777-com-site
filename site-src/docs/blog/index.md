@@ -10,10 +10,10 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 ### June
 
-| Date       | Title                                                        | Notes                                                                                              | Tags                                                  |
-|------------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| 2022-06-07 | [GitHub Codespaces: Initial Impressions](2022/2022-06-07.md) |                                                                                                    | github, cloud                                         |
-| 2022-06-06 | [AWS Cognito Web App in Pure JavaScript](2022/2022-06-06.md) | A detailed walk through of using AWS Cognito with Authorization Code flow with PKCE.               | aws, cognito, authentication, authorization, security |
+| Date       | Title                                                               | Notes                                                                                              | Tags                                                  |
+|------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 2022-06-07 | [GitHub Codespaces vs GitPod: Which is Better?](2022/2022-06-07.md) |                                                                                                    | github, cloud. vscode, ide                            |
+| 2022-06-06 | [AWS Cognito Web App in Pure JavaScript](2022/2022-06-06.md)        | A detailed walk through of using AWS Cognito with Authorization Code flow with PKCE.               | aws, cognito, authentication, authorization, security |
 
 ### May
 
