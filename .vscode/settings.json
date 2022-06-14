@@ -12,6 +12,7 @@
         "OIDC",
         "OLDPWD",
         "pykles",
-        "Quickstart"
+        "Quickstart",
+        "stackoverflow"
     ]
 }
