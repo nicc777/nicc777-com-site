@@ -3,6 +3,9 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: pip install -r requirements.txt
+  - name: Python Requirements
+    init: pip install -r requirements.txt
+  - name: AWS CLI
+    init: cd ~/ && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install && cd $OLDPWD
 
 
