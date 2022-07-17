@@ -2,7 +2,7 @@
 
 Below are all my blog entries grouped by year and month with the latest entries at the top.
 
-_**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries. Older blog entries before this date may not all have tag entries on te pages yet.
+_**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. Older blog entries before this date may not all have tag entries on te pages yet.
 
 [TOC]
 
