@@ -8,6 +8,13 @@ _**Introducting Tags**_: From 2022-04-05 I will be starting to tag blog entries.
 
 ## 2022
 
+### July
+
+| Date       | Title                                                               | Notes                                                                                              | Tags                                                  |
+|------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 2022-07-17 | [Tech Nostalgia: Windows 98](2022/2022-07-17.md)                    |                                                                                                    | nostalgia, windows98, pcem, emulation, emulators      |
+
+
 ### June
 
 | Date       | Title                                                               | Notes                                                                                              | Tags                                                  |
