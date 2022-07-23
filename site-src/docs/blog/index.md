@@ -12,6 +12,7 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 | Date       | Title                                                               | Notes                                                                                              | Tags                                                  |
 |------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 2022-07-23 | [Tech Nostalgia: Qemu and RedHat Linux 6.2](2022/2022-07-23.md)     |                                                                                                    | nostalgia, redhat62, qemu, emulation, emulators       |
 | 2022-07-17 | [Tech Nostalgia: Windows 98](2022/2022-07-17.md)                    |                                                                                                    | nostalgia, windows98, pcem, emulation, emulators      |
 
 
