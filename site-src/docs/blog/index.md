@@ -10,10 +10,11 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 ### July
 
-| Date       | Title                                                               | Notes                                                                                              | Tags                                                  |
-|------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| 2022-07-23 | [Tech Nostalgia: Qemu and RedHat Linux](2022/2022-07-23.md)         |                                                                                                    | nostalgia, redhat62, qemu, emulation, emulators       |
-| 2022-07-17 | [Tech Nostalgia: Windows 98](2022/2022-07-17.md)                    |                                                                                                    | nostalgia, windows98, pcem, emulation, emulators      |
+| Date       | Title                                                               | Notes                                                                                              | Tags                                                                                                       |
+|------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| 2022-07-31 | [Event Driven Operations - An Example in AWS](2022/2022-07-31.md)   | If you are a cloud engineer or infrastructure support engineer, this may be of interest to you.    | infrastructure, iac, event driven, patterns, architecture, aws, azure, redhat, cloud, support, devops, sre |
+| 2022-07-23 | [Tech Nostalgia: Qemu and RedHat Linux](2022/2022-07-23.md)         |                                                                                                    | nostalgia, redhat62, qemu, emulation, emulators                                                            |
+| 2022-07-17 | [Tech Nostalgia: Windows 98](2022/2022-07-17.md)                    |                                                                                                    | nostalgia, windows98, pcem, emulation, emulators                                                           |
 
 
 ### June
