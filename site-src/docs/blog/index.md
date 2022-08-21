@@ -10,9 +10,10 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 ### August
 
-| Date       | Title                                                                  | Notes                                                                                              | Tags                                                                                                       |
-|------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 2022-08-11 | [AWS HTTP API and Python based Lambda Integration](2022/2022-08-11.md) | An introductory look at parsing POST requests through Proxy Integration from HTTP API's in AWS     | aws, lambda, python, api, proxy, integration                                                               |
+| Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
+|------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 2022-08-21 | [Some Reflections, Current Work and Future Blogs](2022/2022-08-21.md)  |                                                                                                    | personal, reflection                           |
+| 2022-08-11 | [AWS HTTP API and Python based Lambda Integration](2022/2022-08-11.md) | An introductory look at parsing POST requests through Proxy Integration from HTTP API's in AWS     | aws, lambda, python, api, proxy, integration   |
 
 
 ### July
