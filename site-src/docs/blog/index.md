@@ -8,6 +8,13 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 ## 2022
 
+### September
+
+| Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
+|------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 2022-09-20 | [Productivity and your Hardware](2022/2022-09-21.md)                   |                                                                                                    | personal, hardware, productivity               |
+
+
 ### August
 
 | Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
