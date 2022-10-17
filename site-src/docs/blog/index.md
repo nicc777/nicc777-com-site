@@ -8,6 +8,13 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 ## 2022
 
+### October
+
+| Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
+|------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 2022-10-17 | [Reflection on my current personal project](2022/2022-10-17.md)        |                                                                                                    | personal, productivity                         |
+
+
 ### September
 
 | Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
