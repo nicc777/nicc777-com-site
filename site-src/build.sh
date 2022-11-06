@@ -135,6 +135,15 @@ View my publicly-auditable identity here: https://keybase.io/nicc777
 ==================================================================
 EOF
 
+
+cat << EOF > site/.well-known/security.txt
+Contact: mailto:nicc777+security@gmail.com
+Expires: 2023-12-31T22:59:00.000Z
+Encryption: https://nicc777.keybase.pub/nico_coetzee_0x6C471B7A_public.asc
+Preferred-Languages: en, nl, af
+Canonical: https://www.nicc777.com/.well-known/security.txt
+EOF
+
 # cd site
 # aws s3 sync ./ s3://www.nicc777.com/ --profile nicc777
 # cd ../
