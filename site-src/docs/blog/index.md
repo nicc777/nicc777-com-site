@@ -13,7 +13,7 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 | Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
 |------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
 | 2022-11-06 | [More and New Web Standards - security.txt](2022/2022-11-06.md)        |                                                                                                    | internet, security, infosec, standards         |
-
+| 2022-11-29 | [Time Synchronization from Amazon AWS](2022/2022-11-29.md)             |                                                                                                    | internet, services, ntp, aws                   |
 
 ### October
 
