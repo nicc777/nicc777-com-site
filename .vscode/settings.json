@@ -4,6 +4,7 @@
         "Civo",
         "Codespaces",
         "dialup",
+        "fastapi",
         "filebeats",
         "Gluster",
         "Inteli",
@@ -17,6 +18,7 @@
         "pykles",
         "Quatro",
         "Quickstart",
-        "stackoverflow"
+        "stackoverflow",
+        "uvicorn"
     ]
 }

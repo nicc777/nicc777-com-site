@@ -8,6 +8,13 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 ## 2023
 
+### October
+
+| Date       | Title                                                                             | Notes                                                                                              | Tags                                           |
+|------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 2023-10-14 | [An easier way to use Python in Kubernetes - a look at k8rs](2023/2023-10-14.md)  | My first look at the [kr8s project](https://github.com/kr8s-org/kr8s)                              | kubernetes, python, fastapi, uvicorn           |
+
+
 ### March
 
 | Date       | Title                                                                  | Notes                                                                                              | Tags                                           |
