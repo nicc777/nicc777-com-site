@@ -137,11 +137,30 @@ EOF
 
 
 cat << EOF > site/.well-known/security.txt
-Contact: mailto:nicc777+security@gmail.com
-Expires: 2023-12-31T22:59:00.000Z
-Encryption: https://nicc777.keybase.pub/nico_coetzee_0x6C471B7A_public.asc
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: https://github.com/nicc777
+Expires: 2024-12-31T22:59:00.000Z
+Encryption: https://keybase.io/nicc777/pgp_keys.asc
 Preferred-Languages: en, nl, af
 Canonical: https://www.nicc777.com/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEEyWbjRMZ7xwAvl9KdYZXLGxHG3oFAmVq/0kACgkQdYZXLGxH
+G3rxOhAAiuLcSVF9oip2Qqlz6f6Eu4VttXFgLU49uAgoZaGd+B9JqK1PHKRjU+st
+6cb9p9pVYxWBZV2P2BY7sjAo1HoCHQPdNqPmrGH6bn7WgTQfoqSXE9XvbsYZB2XI
+ME8DoTUHKXqIy8YZNblSNRKK8VcFFsc6gU4CcpykJMOaYEgG+sFx3D20u7n9UQGm
+4Ix29LtdXpQNnRuJDZR4PjHaJ9gXSZF3FZ+7oZjf5mjXsTLDqVUGxCJeVFKnyak1
+cbda49WVUGoyzqCDS+32vux0pac6Uj2D4wG4V/fygtQXdyXgjvuK6UT7NgMIeB7z
+/AkOkEkoMQG7wJnybE/zjT7giK5BVvcr9mymx6AP87unTeztBderu6mHy0wObpTQ
+rgnS7m2UMTi9AGoEJnQ9PYbOq35vm1d1RU3eamIrv07UzzEA2DTvUBUbsRNKfbT6
+7FBY6pNrLymBVSWIdhmp1rY9XN+csvcTBC819MVzirBn53JU2+r87E6Ag0DwU7Hn
+0o/TM/MZ7sGj18r2g+WMGn9DPofHqTuzKqbID4Ft2hKJUnFb7xvc9SvbqvBTIlzg
+83iK/u17E06ppa7LslKotmBV+z1opAcOLoQNCN2aH6/bkyiJED5zLieTTOAneOEp
+dX5I6z5ZANwTWKnFGyu9tAKYAkAa5HZab8cPvB6OW4TAVh27wB4=
+=uqQY
+-----END PGP SIGNATURE-----
 EOF
 
 # cd site
