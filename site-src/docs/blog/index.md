@@ -6,6 +6,15 @@ _**Introducing Tags**_: From 2022-04-05 I will be starting to tag blog entries. 
 
 [TOC]
 
+## 2024
+
+### January
+
+| Date       | Title                                                                             | Notes                                                                                              | Tags                                           |
+|------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 2024-01-13 | [General Purpose Containers in Kubernetes](2024/2024-01-13.md)                    | A look at how to re-use the same container for various tasks, which can be handy in some cases.    | kubernetes, python                             |
+
+
 ## 2023
 
 ### October
